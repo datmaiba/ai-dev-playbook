@@ -1,0 +1,35 @@
+# .cursorrules — <PROJECT NAME>
+# TEMPLATE: copy to repo root as .cursorrules. Same rule set as CLAUDE.md, condensed.
+# The two entrypoints must never contradict each other; both point at <RULES_DIR>.
+
+This repository treats <RULES_DIR> as the authoritative source of truth. Read the relevant rule files before generating or modifying code. MUST / MUST NOT violations are blocking defects.
+
+## Source of truth (read before ANY code change)
+- <RULES_DIR>/… (list the rule files)
+- <GUARDRAILS_PATH> — run before writing code
+- <LESSONS_LEARNED_PATH> — known anti-patterns; never reintroduce
+
+## Architecture
+- <FLOW: e.g. component → hook → api | Controllers → Services → Repositories → Models>
+- <3–6 one-line MUST rules from the matching stack profile>
+
+## Naming
+- <one line: the naming conventions>
+
+## Styling (frontend only)
+- Tokens only: var(--…). No raw hex/px. No inline styles outside documented exceptions.
+
+## Data contracts
+- <the silent-failure traps that apply, one line each>
+
+## Environment
+- All build/test/lint via <SANCTIONED COMMAND>. Never host binaries; unavailable → say so and stop.
+
+## Scope
+- Declare files you will touch. Ask before editing shared code/configs/other modules. No drive-by refactors.
+
+## Plans
+- Plan requested ⇒ plan only, STOP, wait for explicit approval.
+
+## Verification
+- "verify rules" ⇒ list loaded rule files + recite highest-risk rules. No code.
